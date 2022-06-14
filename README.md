@@ -7,6 +7,7 @@ Deployer automatiquement un SmartContrat avec le réseau de test
 apt-get install docker
 # docker compose
 apt-get install docker compose
+usermod -a -G docker root
 # git
 apt-get install git
 # curl
@@ -23,7 +24,7 @@ curl -sSL https://bit.ly/2ysbOFE | bash -s
 
 # Copier ensuite le fichier start.sh dans /fabric/fabric-samples/test-network/
 # Copier le fichier assetTransfer.js dans /fabric/fabric-samples/asset-transfer-basic/chaincode-javascript/lib/
-# Copier le fichier assetTransfer.test.js dans /fabric/fabric-samples/asset-transfer-basic/chaincode-javascript//test/
+# Copier le fichier assetTransfer.test.js dans /fabric/fabric-samples/asset-transfer-basic/chaincode-javascript/test/
 
 # Depuis la session root (recommandé), se mettre sur le dossier "test-network" et lancer le script "start.sh" :
 cd /fabric/fabric-samples/test-network/
@@ -60,7 +61,7 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.exa
 # Arreter le réseau
 ./network.sh down
 
-# relanser la création de la blockchain + le déploiement du smartcontrat
+# relancer la création de la blockchain + le déploiement du smartcontrat
 ./start.sh
 
-# Amusez vous dans l'écriture du SM.
+# Amusez-vous dans l'écriture du SM. :)
